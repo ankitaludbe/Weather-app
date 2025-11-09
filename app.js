@@ -11,7 +11,7 @@ const srcBox = document.getElementById('searchBox');
 const srcBtn = document.getElementById('searchBtn');
 
 const api = 'http://api.weatherapi.com/v1/current.json?';
-const key = 'key=ca111846a45f40439bd155711250510&';
+const key = '';
 
 async function weatherData(city) {
   fetch(`${api}${key}q=${city}`)
