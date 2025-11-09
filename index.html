@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather — Classy</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google font (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="app">
+    <!-- Main Weather Card -->
+    <section class="card">
+      <div class="header">
+          <div>
+            <h1>Weather App</h1>
+          </div>
+        </div>
+
+      <div class="weather-main" aria-live="polite">
+          <div class="icon">
+            <img id="icon" alt="Weather icon" src="icon-cloud.jpg" />
+          </div>
+          <div class="location" id="location">—</div>
+          <div class="localtime" id="localtime">Local time —</div>
+
+          <div class="metrics" style="margin-top:18px">
+            <div class="metric">
+              <div class="label">Temperature</div>
+              <div class="value" id="temp">— °C</div>
+            </div>
+            <div class="metric">
+              <div class="label">Feels like</div>
+              <div class="value" id="feels">— °C</div>
+            </div>
+            <div class="metric">
+              <div class="label">Humidity</div>
+              <div class="value" id="humidity">— %</div>
+            </div>
+            <div class="metric">
+              <div class="label">Wind</div>
+              <div class="value" id="wind">— kph</div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- Sidebar: Search + info -->
+    <div class="side">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+        <div>
+          <strong>Find weather</strong>
+          <div class="hint">Search by city name</div>
+        </div>
+        <div style="font-size:22px;opacity:0.9">🌤️</div>
+      </div>
+
+      <div class="search-row">
+        <!-- JS should select #q and #searchBtn -->
+        <div class="search" style="flex:1">
+          <input id="searchBox" placeholder="Enter city or lat,lon" aria-label="City or coordinates">
+        </div>
+        <div>
+          <button id="searchBtn" title="Search">Go</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
