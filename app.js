@@ -17,9 +17,7 @@ async function weatherData(city) {
   fetch(`${api}${key}q=${city}`)
   .then(response => response.json())
   .then(data => {
-    console.log(data); // full object for debugging
-
-    // No need for JSON.stringify — just insert plain text
+    console.log(data); 
     iconEle.src = "https:" + data.current.condition.icon;
     locationEle.textContent = `${data.location.name}, ${data.location.country}`;
     timeEle.textContent = `${data.location.localtime}`;
